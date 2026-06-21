@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dgx8hkugbnbxe"]
+
+[ext_resource type="Script" uid="uid://dtei454lsq056" path="res://record_player.gd" id="1_xedat"]
+[ext_resource type="Texture2D" uid="uid://wbumws31qdmo" path="res://CandyFlossMachine.jpg" id="2_rryc8"]
+
+[node name="RecordPlayer" type="StaticBody2D" unique_id=1067150647]
+script = ExtResource("1_xedat")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=83228567]
+texture = ExtResource("2_rryc8")
