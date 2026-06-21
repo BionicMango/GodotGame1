@@ -1,9 +1,36 @@
 [gd_scene format=3 uid="uid://cf1bnvrocd2kn"]
 
 [ext_resource type="PackedScene" uid="uid://dgx8hkugbnbxe" path="res://record_player.tscn" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://c5fs1xlfwl363" path="res://ScoreboardText.gd" id="2_uu6xs"]
+[ext_resource type="Script" uid="uid://c3clupapps0v7" path="res://tempo.gd" id="3_r0du0"]
 
 [node name="Node2D" type="Node2D" unique_id=1777764328]
 
 [node name="RecordPlayer" parent="." unique_id=1067150647 instance=ExtResource("1_glv2v")]
-position = Vector2(559, 313)
-scale = Vector2(0.8, 0.8)
+position = Vector2(576, 400)
+angular_damp_mode = 1
+
+[node name="Scoreboard" type="Label" parent="." unique_id=1124345525]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 552.0
+offset_top = 208.5
+offset_right = 600.0
+offset_bottom = 231.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Score:"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_uu6xs")
+
+[node name="Tempo" type="Label" parent="." unique_id=189479314]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("3_r0du0")
+metadata/_edit_use_anchors_ = true
