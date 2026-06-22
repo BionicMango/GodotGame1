@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dqrlvw8t6maf2"]
+
+[node name="stick" type="StaticBody2D" unique_id=1704991311]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1438922173]

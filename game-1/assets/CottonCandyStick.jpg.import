@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wbumws31qdmo"
-path="res://.godot/imported/CandyFlossMachine.jpg-5caaf692094360105f02d653f3e9f1bd.ctex"
+uid="uid://51ewkolg8b67"
+path="res://.godot/imported/CottonCandyStick.jpg-32f45a06a8a705d00552ff0f9e9b39d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CandyFlossMachine.jpg"
-dest_files=["res://.godot/imported/CandyFlossMachine.jpg-5caaf692094360105f02d653f3e9f1bd.ctex"]
+source_file="res://assets/CottonCandyStick.jpg"
+dest_files=["res://.godot/imported/CottonCandyStick.jpg-32f45a06a8a705d00552ff0f9e9b39d6.ctex"]
 
 [params]
 
