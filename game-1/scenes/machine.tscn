@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://dgx8hkugbnbxe"]
 
 [ext_resource type="Script" uid="uid://dtei454lsq056" path="res://scripts/record_player.gd" id="1_xedat"]
-[ext_resource type="Texture2D" uid="uid://wbumws31qdmo" path="res://assets/CandyFlossMachine.jpg" id="2_rryc8"]
+[ext_resource type="Texture2D" uid="uid://b6fk4u4rdonfs" path="res://assets/CandyFlossMachineNoBG.png" id="2_oq04d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xedat"]
 
-[node name="RecordPlayer" type="RigidBody2D" unique_id=584695376]
+[node name="cotton_candy_machine" type="RigidBody2D" unique_id=584695376]
 gravity_scale = 0.0
 script = ExtResource("1_xedat")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=83228567]
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_rryc8")
+texture = ExtResource("2_oq04d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=490124922]
 position = Vector2(-2, 2)

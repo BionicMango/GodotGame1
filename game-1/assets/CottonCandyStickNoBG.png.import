@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6bp5ordrhatj"
-path="res://.godot/imported/CottonCandyPuff.jpg-593257598b19e294a909430fcec1b62c.ctex"
+uid="uid://soxac3uewxet"
+path="res://.godot/imported/CottonCandyStickNoBG.png-172b3f58d6eddaaa8944a8c07d13fb01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CottonCandyPuff.jpg"
-dest_files=["res://.godot/imported/CottonCandyPuff.jpg-593257598b19e294a909430fcec1b62c.ctex"]
+source_file="res://assets/CottonCandyStickNoBG.png"
+dest_files=["res://.godot/imported/CottonCandyStickNoBG.png-172b3f58d6eddaaa8944a8c07d13fb01.ctex"]
 
 [params]
 
