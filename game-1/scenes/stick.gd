@@ -1,9 +1,8 @@
 extends StaticBody2D
-@onready var record_player = $"../RecordPlayer";
 
 var stickOn: bool = false;
 
-func stick_input(delta: float) -> void:
+func stick_input() -> void:
 	'''If the stick is 'on', i.e. collecting cotton candy, then toggle'''
 	if Input.is_action_just_pressed('ui_space'):
 		stickOn = !stickOn;
@@ -14,4 +13,4 @@ func stick_input(delta: float) -> void:
 				rotation = -PI/4;
 
 func _process(delta: float) -> void:
-	stick_input(delta);
+	stick_input();

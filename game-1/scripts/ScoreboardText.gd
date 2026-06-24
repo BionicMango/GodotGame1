@@ -1,6 +1,5 @@
 extends Label
-@onready var machine = $"../RecordPlayer";
-@onready var stick = $"../stick";
+@onready var Machine = $"../RecordPlayer";
 
 func _process(_delta: float) -> void:
-	text = 'Score: ' + str(machine.score) + '\nStick: ' + str(stick.stickOn);
+	text = 'Score: ' + str(Machine.score);
