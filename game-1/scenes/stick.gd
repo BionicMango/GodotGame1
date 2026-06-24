@@ -14,3 +14,9 @@ func stick_input() -> void:
 
 func _process(delta: float) -> void:
 	stick_input();
+
+func _on_machine_mouse_entered() -> void:
+	scale = Vector2(1.1, 1.1);
+
+func _on_machine_mouse_exited() -> void:
+	scale = Vector2(1, 1);
