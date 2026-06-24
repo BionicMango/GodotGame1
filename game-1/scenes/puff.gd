@@ -38,9 +38,6 @@ func cotton_candy_frame():
 	else:
 		PuffSprite.frame = 1;
 
-func _ready() -> void:
-	PuffSprite.show();
-
 func _process(delta: float) -> void:
 	# syncing rotation & position with the stick
 	rotation = Stick.rotation;

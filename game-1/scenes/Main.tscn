@@ -10,13 +10,13 @@
 
 [node name="RecordPlayer" parent="." unique_id=1067150647 instance=ExtResource("1_0bbpv")]
 position = Vector2(576, 400)
-angular_damp_mode = 1
 
 [node name="stick" parent="." unique_id=1704991311 instance=ExtResource("2_vcsgt")]
 position = Vector2(740, 475)
 scale = Vector2(0.3, 0.3)
 
 [node name="Puff" parent="." unique_id=139482921 instance=ExtResource("5_vcsgt")]
+position = Vector2(742.99994, 376.99997)
 scale = Vector2(0.4, 0.4)
 
 [node name="Scoreboard" type="Label" parent="." unique_id=1124345525]
