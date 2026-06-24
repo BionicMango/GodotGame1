@@ -45,8 +45,8 @@ func _process(delta: float) -> void:
 	# syncing rotation & position with the stick
 	rotation = Stick.rotation;
 	position = Stick.position + Vector2(100 * sin(rotation), -100 * cos(rotation));
-	# Update good & bad times IF ACTIVATED
-	if Stick.stickOn:
+	# Update good & bad times IF ACTIVATED AND IF IRREVERSABLY BAD (bad < 5)
+	if Stick.stickOn and bad < 5:
 		check_rpm(delta);
 	# Update frames
 	cotton_candy_frame();
