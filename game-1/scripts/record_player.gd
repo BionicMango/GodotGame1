@@ -22,11 +22,11 @@ func update_rpm() -> void:
 
 func _process(delta: float) -> void:
 	# rpm from angular velocity w/ x2 multiplier
-	rpm = 8 * 60 * angular_velocity / (2 * PI);
+	rpm = 8 * 60 * self.angular_velocity / (2 * PI);
 	rotation += angular_velocity * delta
 	if selected:
 		update_rpm();
-		scale = Vector2(1.1, 1.1);
+		scale = Vector2(0.9, 0.9);
 	else:
 		scale = Vector2(1, 1);
 

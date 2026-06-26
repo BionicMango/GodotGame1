@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cx4ueppyf26vb"]
+
+[ext_resource type="Script" uid="uid://dn0ml5l6qx34y" path="res://scripts/button_color.gd" id="1_kyiv2"]
+[ext_resource type="Texture2D" uid="uid://dvgcx5jqubxks" path="res://assets/CottonCandyMachineIconsNoBG.png" id="2_mribx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fgcwk"]
+radius = 73.0
+
+[node name="ButtonColor" type="Node2D" unique_id=1366930519]
+script = ExtResource("1_kyiv2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1985949632]
+texture = ExtResource("2_mribx")
+hframes = 2
+vframes = 2
+
+[node name="Area2D" type="Area2D" parent="." unique_id=529178391]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1122129615]
+position = Vector2(1.2, 0)
+shape = SubResource("CircleShape2D_fgcwk")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_button_color_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_button_color_mouse_exited"]

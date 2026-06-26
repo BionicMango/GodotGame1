@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d6iqpv87meyp"]
+
+[ext_resource type="Texture2D" uid="uid://dvgcx5jqubxks" path="res://assets/CottonCandyMachineIconsNoBG.png" id="1_h1yys"]
+[ext_resource type="Script" uid="uid://c3sm0a08sxewu" path="res://scripts/button_bin.gd" id="1_jiati"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jiati"]
+radius = 73.8
+
+[node name="ButtonBin" type="Node2D" unique_id=1162150241]
+script = ExtResource("1_jiati")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=923775387]
+texture = ExtResource("1_h1yys")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2070966301]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1709726430]
+position = Vector2(1.2, 0)
+shape = SubResource("CircleShape2D_jiati")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_button_bin_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_button_bin_mouse_exited"]

@@ -6,8 +6,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_xedat"]
 radius = 4.291068
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_73k52"]
-size = Vector2(411, 394.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_73k52"]
+radius = 142.5
 
 [node name="cotton_candy_machine" type="StaticBody2D" unique_id=1985690233]
 script = ExtResource("1_xedat")
@@ -24,8 +24,8 @@ shape = SubResource("CircleShape2D_xedat")
 [node name="Area2D" type="Area2D" parent="." unique_id=1382682525]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2026843635]
-position = Vector2(9.500004, 5.7499943)
-shape = SubResource("RectangleShape2D_73k52")
+position = Vector2(-1.5, 2.5)
+shape = SubResource("CircleShape2D_73k52")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_machine_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_machine_mouse_exited"]

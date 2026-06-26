@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqrlvw8t6maf2"]
 
 [ext_resource type="Texture2D" uid="uid://soxac3uewxet" path="res://assets/CottonCandyStickNoBG.png" id="1_i3vek"]
-[ext_resource type="Script" uid="uid://rqy63wbm2kkb" path="res://scenes/stick.gd" id="1_ld7er"]
+[ext_resource type="Script" uid="uid://rqy63wbm2kkb" path="res://scripts/stick.gd" id="1_ld7er"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3vek"]
 height = 634.0

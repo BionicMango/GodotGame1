@@ -1,45 +1,9 @@
-[gd_scene format=3 uid="uid://cf1bnvrocd2kn"]
+[gd_scene format=3 uid="uid://durrse6ldwv3d"]
 
-[ext_resource type="PackedScene" uid="uid://dgx8hkugbnbxe" path="res://scenes/machine.tscn" id="1_0bbpv"]
-[ext_resource type="Script" uid="uid://c5fs1xlfwl363" path="res://scripts/ScoreboardText.gd" id="2_rarhs"]
-[ext_resource type="PackedScene" uid="uid://dqrlvw8t6maf2" path="res://scenes/stick.tscn" id="2_vcsgt"]
-[ext_resource type="Script" uid="uid://c3clupapps0v7" path="res://scripts/tempo.gd" id="3_vcsgt"]
-[ext_resource type="PackedScene" uid="uid://cneec5ayy1et0" path="res://scenes/puff.tscn" id="5_vcsgt"]
+[ext_resource type="PackedScene" uid="uid://cf1bnvrocd2kn" path="res://scenes/cotton_candy_setup.tscn" id="1_elqb8"]
 
-[node name="Node2D" type="Node2D" unique_id=1777764328]
+[node name="Node2D" type="Node2D" unique_id=2060320370]
 
-[node name="RecordPlayer" parent="." unique_id=1067150647 instance=ExtResource("1_0bbpv")]
-position = Vector2(576, 400)
-
-[node name="stick" parent="." unique_id=1704991311 instance=ExtResource("2_vcsgt")]
-position = Vector2(740, 475)
-scale = Vector2(0.3, 0.3)
-
-[node name="Puff" parent="." unique_id=139482921 instance=ExtResource("5_vcsgt")]
-position = Vector2(742.99994, 376.99997)
-scale = Vector2(0.4, 0.4)
-
-[node name="Scoreboard" type="Label" parent="." unique_id=1124345525]
-z_index = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 552.0
-offset_top = 208.5
-offset_right = 600.0
-offset_bottom = 231.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Score:"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("2_rarhs")
-
-[node name="Rpm" type="Label" parent="." unique_id=189479314]
-offset_right = 40.0
-offset_bottom = 23.0
-script = ExtResource("3_vcsgt")
-metadata/_edit_use_anchors_ = true
+[node name="Setup1" parent="." unique_id=1777764328 instance=ExtResource("1_elqb8")]
+position = Vector2(591, 328)
+scale = Vector2(0.7, 0.7)

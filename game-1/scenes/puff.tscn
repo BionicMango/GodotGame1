@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cneec5ayy1et0"]
 
 [ext_resource type="Texture2D" uid="uid://cuofd0grimnrf" path="res://assets/CottonCandyPuffNoBG.png" id="1_1s6cm"]
-[ext_resource type="Script" uid="uid://dlqohhh2t7tuq" path="res://scenes/puff.gd" id="1_l8u2j"]
+[ext_resource type="Script" uid="uid://dlqohhh2t7tuq" path="res://scripts/puff.gd" id="1_l8u2j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2y6i1"]
 radius = 15.132746

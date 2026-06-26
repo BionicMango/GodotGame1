@@ -2,13 +2,10 @@ extends StaticBody2D
 @onready var Stick = $"../stick";
 @onready var Machine = $"../RecordPlayer";
 @onready var PuffSprite = $Sprite2D;
+@onready var ButtonColor = $"../ButtonColor";
 
 var good: float = 0; # how much time at the 'correct' machine speed
 var bad: float = 0; # how much time at the 'wrong' machine speed
-var color_puff: int = 0;
-
-func _ready():
-	color_puff = 0;
 
 func check_rpm(delta: float) -> void:
 	'''Updates 'good' and 'bad' scores when RPM is within threshold.
@@ -19,21 +16,6 @@ func check_rpm(delta: float) -> void:
 	else: # BAD
 		bad += delta;
 		good -= delta;
-
-func color_change() -> Color:
-	color_puff += 1
-	match color_puff:
-		0:
-			return Color(1, 1, 1); # color = pink
-		1:
-			return Color(0.803, 1.37, 1.27); # color = light blue
-		2:
-			return Color(0.873, 1.47, 0.756); # color = mint green
-		3:
-			return Color(1.00, 1.47, 1.27) # color = white
-		_:
-			return Color(1, 1, 1);
-			color_puff = 0;
 
 func cotton_candy_frame():
 	'''Switches frames based on how closed to finished the cotton candy is.
@@ -64,14 +46,13 @@ func _process(delta: float) -> void:
 	rotation = Stick.rotation;
 	position = Stick.position + Vector2(100 * sin(rotation), -100 * cos(rotation));
 	
-	# color change triggered? only if cotton candy is unactivated.
-	if Input.is_action_just_pressed('ui_color') and good == 0 and bad == 0:
-		modulate = color_change();
-	
-	# Update good & bad times IF ACTIVATED AND IF IRREVERSABLY BAD (bad < 5)
+	# Update good & bad times IF ACTIVATED AND IF NOT IRREVERSABLY BAD (bad < 5)
 	if Stick.stickOn and bad < 5:
 		check_rpm(delta);
-		
+	
+	# Update puff color based on ButtonColor
+	modulate = ButtonColor.modulate
+	
 	# Update frames
 	cotton_candy_frame();
 	pass;
