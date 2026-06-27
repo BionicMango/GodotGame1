@@ -12,12 +12,11 @@
 [node name="RecordPlayer" parent="." unique_id=1067150647 instance=ExtResource("1_0bbpv")]
 position = Vector2(-2, 1)
 
-[node name="stick" parent="." unique_id=1704991311 instance=ExtResource("2_vcsgt")]
-position = Vector2(162, 76)
-scale = Vector2(0.3, 0.3)
+[node name="stick" parent="." unique_id=1097588413 instance=ExtResource("2_vcsgt")]
+position = Vector2(214, 105)
 
 [node name="Puff" parent="." unique_id=139482921 instance=ExtResource("5_vcsgt")]
-position = Vector2(165, -22)
+position = Vector2(219, -21)
 scale = Vector2(0.4, 0.4)
 
 [node name="ButtonColor" parent="." unique_id=1366930519 instance=ExtResource("4_vcsgt")]

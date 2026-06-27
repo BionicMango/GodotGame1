@@ -6,11 +6,17 @@ extends Node2D
 var mouse_on_button: bool = false;
 var mouse_pressed: bool = false;
 var color_puff: int = 0;
+@export var colors: Array[Color] = [
+	Color(1, 1, 1), # color = pink
+	Color(0.803, 1.37, 1.27), # color = light blue
+	Color(0.873, 1.47, 0.756), # color = mint green
+	Color(1.00, 1.47, 1.27)
+];
 
 func _ready():
 	color_puff = 0;
 
-func _input(event:InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and mouse_on_button:
 		if not event.pressed:
 			# only on releasing a mouse click
@@ -22,19 +28,10 @@ func _input(event:InputEvent) -> void:
 			mouse_pressed = true;
 
 func color_change() -> Color:
-	color_puff += 1
-	match color_puff:
-		0:
-			return Color(1, 1, 1); # color = pink
-		1:
-			return Color(0.803, 1.37, 1.27); # color = light blue
-		2:
-			return Color(0.873, 1.47, 0.756); # color = mint green
-		3:
-			return Color(1.00, 1.47, 1.27) # color = white
-		_:
-			color_puff = 0;
-			return Color(1, 1, 1);
+	color_puff += 1;
+	if color_puff >= len(colors):
+		color_puff = 0;
+	return colors[color_puff]
 
 func _process(_delta: float) -> void:
 	# enlarge when mouse is touching button, smaller if being pressed

@@ -6,13 +6,28 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3vek"]
 height = 634.0
 
-[node name="stick" type="StaticBody2D" unique_id=1704991311]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ld7er"]
+size = Vector2(225, 994)
+
+[node name="stick" type="StaticBody2D" unique_id=842882443]
 position = Vector2(0, -322)
 script = ExtResource("1_ld7er")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1438922173]
-position = Vector2(-8, -220)
+position = Vector2(-2.4, -66)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_i3vek")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=143063279]
+scale = Vector2(0.3, 0.3)
 shape = SubResource("CapsuleShape2D_i3vek")
+
+[node name="StickArea" type="Area2D" parent="." unique_id=612511077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StickArea" unique_id=341107649]
+position = Vector2(0, -34.8)
+scale = Vector2(0.3, 0.3)
+shape = SubResource("RectangleShape2D_ld7er")
+
+[connection signal="mouse_entered" from="StickArea" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="StickArea" to="." method="_on_area_2d_mouse_exited"]

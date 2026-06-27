@@ -15,6 +15,10 @@ run/main_scene="uid://durrse6ldwv3d"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 ui_space={
@@ -29,4 +33,6 @@ ui_space={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+textures/stretch/mode="canvas_items"

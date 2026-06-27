@@ -6,7 +6,7 @@ extends Node2D
 var mouse_on_button: bool = false;
 var mouse_pressed: bool = false;
 
-func _input(event:InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and mouse_on_button:
 		if event.pressed:
 			mouse_pressed = true;

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dg4eepcwq7fne"]
+
+[ext_resource type="Texture2D" uid="uid://8xmditvhpa0k" path="res://assets/icon.svg" id="1_auuls"]
+[ext_resource type="Script" uid="uid://xg8o7mo5rxb4" path="res://scenes/serious_client.gd" id="1_wytia"]
+[ext_resource type="Texture2D" uid="uid://soxac3uewxet" path="res://assets/CottonCandyStickNoBG.png" id="2_av2da"]
+[ext_resource type="Texture2D" uid="uid://cuofd0grimnrf" path="res://assets/CottonCandyPuffNoBG.png" id="3_wytia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fx5yc"]
+size = Vector2(125, 125)
+
+[node name="SeriousClient" type="RigidBody2D" unique_id=630368878 node_paths=PackedStringArray("Client", "Stick", "Puff")]
+gravity_scale = 0.0
+script = ExtResource("1_wytia")
+Client = NodePath("ClientSprite")
+Stick = NodePath("StickSprite")
+Puff = NodePath("PuffSprite")
+
+[node name="ClientSprite" type="Sprite2D" parent="." unique_id=1437716166]
+texture = ExtResource("1_auuls")
+
+[node name="StickSprite" type="Sprite2D" parent="." unique_id=270007844]
+position = Vector2(-0.8999977, 94.200005)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_av2da")
+
+[node name="PuffSprite" type="Sprite2D" parent="." unique_id=934830869]
+position = Vector2(1.1000023, 95.200005)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("3_wytia")
+hframes = 2
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=948784392]
+shape = SubResource("RectangleShape2D_fx5yc")
