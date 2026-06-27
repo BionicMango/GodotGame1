@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_jiati"]
 radius = 73.8
 
-[node name="ButtonBin" type="Node2D" unique_id=1162150241]
+[node name="ButtonBin" type="Node2D" unique_id=1162150241 node_paths=PackedStringArray("ButtonBinSprite")]
 script = ExtResource("1_jiati")
+ButtonBinSprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=923775387]
 texture = ExtResource("1_h1yys")

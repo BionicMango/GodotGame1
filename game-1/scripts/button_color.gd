@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var ButtonColorSprite = $Sprite2D;
-@onready var Puff = $"../Puff";
+@export var ButtonColorSprite: Sprite2D;
+@export var Puff: StaticBody2D;
 
 var mouse_on_button: bool = false;
 var mouse_pressed: bool = false;

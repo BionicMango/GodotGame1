@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_fgcwk"]
 radius = 73.0
 
-[node name="ButtonColor" type="Node2D" unique_id=1366930519]
+[node name="ButtonColor" type="Node2D" unique_id=1366930519 node_paths=PackedStringArray("ButtonColorSprite")]
 script = ExtResource("1_kyiv2")
+ButtonColorSprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1985949632]
 texture = ExtResource("2_mribx")

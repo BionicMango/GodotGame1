@@ -1,9 +1,21 @@
 [gd_scene format=3 uid="uid://durrse6ldwv3d"]
 
+[ext_resource type="Script" uid="uid://c4shjjaegtv26" path="res://scenes/main.gd" id="1_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://cf1bnvrocd2kn" path="res://scenes/cotton_candy_setup.tscn" id="1_elqb8"]
 [ext_resource type="PackedScene" uid="uid://dg4eepcwq7fne" path="res://scenes/serious_client.tscn" id="2_rvslj"]
 
-[node name="Node2D" type="Node2D" unique_id=2060320370]
+[node name="Node2D" type="Node2D" unique_id=2060320370 node_paths=PackedStringArray("ScoreLabel", "Setups")]
+script = ExtResource("1_0bbpv")
+ScoreLabel = NodePath("RichTextLabel")
+Setups = [NodePath("Setup1"), NodePath("Setup2")]
+
+[node name="Setup1" parent="." unique_id=1777764328 instance=ExtResource("1_elqb8")]
+position = Vector2(285.00003, 452)
+scale = Vector2(0.7, 0.7)
+
+[node name="Setup2" parent="." unique_id=516545124 instance=ExtResource("1_elqb8")]
+position = Vector2(816, 452)
+scale = Vector2(0.7, 0.7)
 
 [node name="SeriousClient" parent="." unique_id=430636779 instance=ExtResource("2_rvslj")]
 position = Vector2(267, 78)
@@ -20,10 +32,8 @@ position = Vector2(679, 77)
 [node name="SeriousClient5" parent="." unique_id=926190491 instance=ExtResource("2_rvslj")]
 position = Vector2(543, 77)
 
-[node name="Setup1" parent="." unique_id=1777764328 instance=ExtResource("1_elqb8")]
-position = Vector2(285.00003, 452)
-scale = Vector2(0.7, 0.7)
-
-[node name="Setup2" parent="." unique_id=516545124 instance=ExtResource("1_elqb8")]
-position = Vector2(816, 452)
-scale = Vector2(0.7, 0.7)
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1405502665]
+offset_left = 531.0
+offset_top = 321.0
+offset_right = 571.0
+offset_bottom = 361.0

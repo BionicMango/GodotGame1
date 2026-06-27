@@ -1,6 +1,8 @@
 extends StaticBody2D
 
-@onready var Machine = $"../RecordPlayer";
+@export var Machine: StaticBody2D;
+@export var StickSprite: Sprite2D;
+@export var StickArea: Area2D;
 
 var stickOn: bool = false;
 var dragging: bool = false;

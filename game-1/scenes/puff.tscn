@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_2y6i1"]
 radius = 15.132746
 
-[node name="Puff" type="StaticBody2D" unique_id=139482921]
+[node name="Puff" type="StaticBody2D" unique_id=139482921 node_paths=PackedStringArray("PuffSprite")]
 script = ExtResource("1_l8u2j")
+PuffSprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1480587882]
 texture = ExtResource("1_1s6cm")

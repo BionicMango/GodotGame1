@@ -9,9 +9,11 @@ height = 634.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ld7er"]
 size = Vector2(225, 994)
 
-[node name="stick" type="StaticBody2D" unique_id=842882443]
+[node name="stick" type="StaticBody2D" unique_id=842882443 node_paths=PackedStringArray("StickSprite", "StickArea")]
 position = Vector2(0, -322)
 script = ExtResource("1_ld7er")
+StickSprite = NodePath("Sprite2D")
+StickArea = NodePath("StickArea")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1438922173]
 position = Vector2(-2.4, -66)

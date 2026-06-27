@@ -1,8 +1,8 @@
 extends StaticBody2D
-@onready var Stick = $"../stick";
-@onready var Machine = $"../RecordPlayer";
-@onready var PuffSprite = $Sprite2D;
-@onready var ButtonColor = $"../ButtonColor";
+@export var Stick: StaticBody2D;
+@export var Machine: StaticBody2D;
+@export var PuffSprite: Sprite2D;
+@export var ButtonColor: Node2D;
 
 var good: float = 0; # how much time at the 'correct' machine speed
 var bad: float = 0; # how much time at the 'wrong' machine speed

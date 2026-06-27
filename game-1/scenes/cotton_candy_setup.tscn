@@ -1,31 +1,44 @@
 [gd_scene format=3 uid="uid://cf1bnvrocd2kn"]
 
 [ext_resource type="PackedScene" uid="uid://dgx8hkugbnbxe" path="res://scenes/machine.tscn" id="1_0bbpv"]
+[ext_resource type="Script" uid="uid://c4cqarqi3kn6y" path="res://scenes/setup.gd" id="1_r25qq"]
 [ext_resource type="PackedScene" uid="uid://dqrlvw8t6maf2" path="res://scenes/stick.tscn" id="2_vcsgt"]
 [ext_resource type="Script" uid="uid://c3clupapps0v7" path="res://scripts/tempo.gd" id="3_vcsgt"]
 [ext_resource type="PackedScene" uid="uid://cx4ueppyf26vb" path="res://scenes/button_color.tscn" id="4_vcsgt"]
 [ext_resource type="PackedScene" uid="uid://d6iqpv87meyp" path="res://scenes/button_bin.tscn" id="5_c01mt"]
 [ext_resource type="PackedScene" uid="uid://cneec5ayy1et0" path="res://scenes/puff.tscn" id="5_vcsgt"]
 
-[node name="Setup" type="Node2D" unique_id=1777764328]
+[node name="Setup" type="Node2D" unique_id=1777764328 node_paths=PackedStringArray("Machine", "Stick", "Puff", "ButtonColor", "ButtonBin")]
+script = ExtResource("1_r25qq")
+Machine = NodePath("RecordPlayer")
+Stick = NodePath("stick")
+Puff = NodePath("Puff")
+ButtonColor = NodePath("ButtonColor")
+ButtonBin = NodePath("ButtonBin")
 
 [node name="RecordPlayer" parent="." unique_id=1067150647 instance=ExtResource("1_0bbpv")]
 position = Vector2(-2, 1)
 
-[node name="stick" parent="." unique_id=1097588413 instance=ExtResource("2_vcsgt")]
+[node name="stick" parent="." unique_id=1097588413 node_paths=PackedStringArray("Machine") instance=ExtResource("2_vcsgt")]
 position = Vector2(214, 105)
+Machine = NodePath("../RecordPlayer")
 
-[node name="Puff" parent="." unique_id=139482921 instance=ExtResource("5_vcsgt")]
+[node name="Puff" parent="." unique_id=139482921 node_paths=PackedStringArray("Stick", "Machine", "ButtonColor") instance=ExtResource("5_vcsgt")]
 position = Vector2(219, -21)
 scale = Vector2(0.4, 0.4)
+Stick = NodePath("../stick")
+Machine = NodePath("../RecordPlayer")
+ButtonColor = NodePath("../ButtonColor")
 
-[node name="ButtonColor" parent="." unique_id=1366930519 instance=ExtResource("4_vcsgt")]
+[node name="ButtonColor" parent="." unique_id=1366930519 node_paths=PackedStringArray("Puff") instance=ExtResource("4_vcsgt")]
 position = Vector2(-218, -49)
 scale = Vector2(0.5, 0.5)
+Puff = NodePath("../Puff")
 
-[node name="ButtonBin" parent="." unique_id=1162150241 instance=ExtResource("5_c01mt")]
+[node name="ButtonBin" parent="." unique_id=1162150241 node_paths=PackedStringArray("Puff") instance=ExtResource("5_c01mt")]
 position = Vector2(-218, 51)
 scale = Vector2(0.5, 0.5)
+Puff = NodePath("../Puff")
 
 [node name="Rpm" type="Label" parent="." unique_id=189479314]
 anchors_preset = 8
