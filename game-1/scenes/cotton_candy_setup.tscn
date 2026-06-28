@@ -40,7 +40,7 @@ position = Vector2(-218, 51)
 scale = Vector2(0.5, 0.5)
 Puff = NodePath("../Puff")
 
-[node name="Rpm" type="Label" parent="." unique_id=189479314]
+[node name="Rpm" type="Label" parent="." unique_id=189479314 node_paths=PackedStringArray("Machine")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -53,4 +53,5 @@ offset_bottom = -151.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_vcsgt")
+Machine = NodePath("../RecordPlayer")
 metadata/_edit_use_anchors_ = true

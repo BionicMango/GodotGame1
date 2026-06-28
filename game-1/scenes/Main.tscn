@@ -6,7 +6,7 @@
 
 [node name="Node2D" type="Node2D" unique_id=2060320370 node_paths=PackedStringArray("ScoreLabel", "Setups")]
 script = ExtResource("1_0bbpv")
-ScoreLabel = NodePath("RichTextLabel")
+ScoreLabel = NodePath("ScoreLabel")
 Setups = [NodePath("Setup1"), NodePath("Setup2")]
 
 [node name="Setup1" parent="." unique_id=1777764328 instance=ExtResource("1_elqb8")]
@@ -32,8 +32,10 @@ position = Vector2(679, 77)
 [node name="SeriousClient5" parent="." unique_id=926190491 instance=ExtResource("2_rvslj")]
 position = Vector2(543, 77)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1405502665]
+[node name="ScoreLabel" type="RichTextLabel" parent="." unique_id=1405502665]
 offset_left = 531.0
 offset_top = 321.0
 offset_right = 571.0
 offset_bottom = 361.0
+
+[node name="Timer" type="Timer" parent="." unique_id=384985655]
