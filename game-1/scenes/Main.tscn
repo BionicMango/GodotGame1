@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://durrse6ldwv3d"]
 
-[ext_resource type="Script" uid="uid://c4shjjaegtv26" path="res://scenes/main.gd" id="1_0bbpv"]
+[ext_resource type="Script" uid="uid://c4shjjaegtv26" path="res://scripts/main.gd" id="1_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://cf1bnvrocd2kn" path="res://scenes/cotton_candy_setup.tscn" id="1_elqb8"]
 [ext_resource type="PackedScene" uid="uid://dg4eepcwq7fne" path="res://scenes/serious_client.tscn" id="2_rvslj"]
 
-[node name="Node2D" type="Node2D" unique_id=2060320370 node_paths=PackedStringArray("ScoreLabel", "Setups")]
+[node name="Node2D" type="Node2D" unique_id=2060320370 node_paths=PackedStringArray("ScoreLabel", "Setups", "timer", "TimerLabel")]
 script = ExtResource("1_0bbpv")
 ScoreLabel = NodePath("ScoreLabel")
 Setups = [NodePath("Setup1"), NodePath("Setup2")]
+timer = NodePath("Timer")
+TimerLabel = NodePath("TimerLabel")
 
 [node name="Setup1" parent="." unique_id=1777764328 instance=ExtResource("1_elqb8")]
 position = Vector2(285.00003, 452)
@@ -38,4 +40,16 @@ offset_top = 321.0
 offset_right = 571.0
 offset_bottom = 361.0
 
+[node name="TimerLabel" type="Label" parent="." unique_id=1630639183]
+offset_left = 1027.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 64.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Timer" type="Timer" parent="." unique_id=384985655]
+wait_time = 180.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

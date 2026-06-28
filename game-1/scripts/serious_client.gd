@@ -47,4 +47,4 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		style_puff = randi() % 4;
 		Puff.frame = style_puff;
 		
-		Main.score += 1;
+		Global.total_score += 1;

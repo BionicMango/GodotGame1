@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://qkyf4vsv56cm"]
+
+[ext_resource type="Script" uid="uid://cfkhgqwiq6url" path="res://scripts/game_over.gd" id="1_6bcno"]
+
+[node name="Node2D" type="Control" unique_id=1433716772 node_paths=PackedStringArray("GameOverLabel", "PlayAgainButton")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6bcno")
+GameOverLabel = NodePath("GameOverLabel")
+PlayAgainButton = NodePath("Button")
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=1860697535]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 150.0
+offset_right = 861.0
+offset_bottom = 287.0
+theme_override_colors/font_color = Color(0.99607843, 0.68235296, 0.7882353, 1)
+theme_override_colors/font_outline_color = Color(0.5, 0.18, 0.28666672, 1)
+theme_override_constants/outline_size = 50
+theme_override_font_sizes/font_size = 100
+text = "Game Over!"
+
+[node name="HighScore" type="Label" parent="." unique_id=1897641746]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 300.0
+offset_right = 1152.0
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.99607843, 0.68235296, 0.7882353, 1)
+theme_override_font_sizes/font_size = 30
+text = "Score: ##"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=171020045]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 390.0
+offset_right = 701.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0.99607843, 0.68235296, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(0.24705882, 0.72156864, 1, 1)
+theme_override_colors/icon_normal_color = Color(0.3, 0.10800001, 0.17200004, 1)
+theme_override_colors/icon_hover_color = Color(0.8117647, 0.92941177, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Play Again >"
+
+[connection signal="pressed" from="Button" to="." method="_on_replay_button_pressed"]

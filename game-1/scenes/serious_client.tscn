@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dg4eepcwq7fne"]
 
 [ext_resource type="Texture2D" uid="uid://8xmditvhpa0k" path="res://assets/icon.svg" id="1_auuls"]
-[ext_resource type="Script" uid="uid://xg8o7mo5rxb4" path="res://scenes/serious_client.gd" id="1_wytia"]
+[ext_resource type="Script" uid="uid://xg8o7mo5rxb4" path="res://scripts/serious_client.gd" id="1_wytia"]
 [ext_resource type="Texture2D" uid="uid://soxac3uewxet" path="res://assets/CottonCandyStickNoBG.png" id="2_av2da"]
 [ext_resource type="Texture2D" uid="uid://cuofd0grimnrf" path="res://assets/CottonCandyPuffNoBG.png" id="3_wytia"]
 
